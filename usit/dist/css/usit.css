@@ -16,3 +16,16 @@
 {
     margin-left:5px;
 }
+
+.ml15
+{
+    margin-left:15px;
+}
+
+.point{
+    cursor:pointer;
+}
+
+.notshowable{
+    display:none !important;
+}

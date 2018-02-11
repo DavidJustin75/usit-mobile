@@ -613,3 +613,75 @@ function getUrlVars(url) {
     }
     return vars;
 }
+
+
+
+function checkPassword(source,result) {
+
+
+        $source = $(source);
+        var password = $source.val();
+
+        $result =$(result);
+    
+        $result.empty();
+    
+        //TextBox left blank.
+        if (password.length == 0) {
+            // $("#password_strength").text("");
+            return;
+        }
+    
+        //Regular Expressions.
+        var regex = new Array();
+        regex.push("[A-Z]"); //Uppercase Alphabet.
+        regex.push("[a-z]"); //Lowercase Alphabet.
+        regex.push("[0-9]"); //Digit.
+        regex.push("[$@$!%*#?&]"); //Special Character.
+    
+        var passed = 0;
+    
+        //Validate for each Regular Expression.
+        for (var i = 0; i < regex.length; i++) {
+            if (new RegExp(regex[i]).test(password)) {
+                passed++;
+            }
+        }
+    
+        if (password.length > 8) {
+            passed++;
+        }
+    
+        //Display status.
+        var color = "";
+        var strength = "";
+        switch (passed) {
+            case 0:
+            case 1:
+                strength = "1";
+                break;
+            case 2:
+                strength = "2";
+                break;
+            case 3:
+            case 4:
+                strength = "3";
+                break;
+            case 5:
+                strength = "4";
+                break;
+        }
+    
+        if (strength === "1") {
+            $result.html('패스워드가 매우 약합니다..');
+        }
+        else if (strength === "2") {
+            $result.html('패스워드가 조금 더 강하면 좋을것 같습니다');
+        }
+        else if (strength === "3") {
+            $result.html('이정도 패스워드면 봐줄만 합니다.');
+        }
+        else if (strength === "4") {
+            $result.html('오호 강력한 패스워드 입니다.');
+        }
+    }

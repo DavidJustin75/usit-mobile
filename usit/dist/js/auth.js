@@ -47,10 +47,10 @@ $(document).ready(function ($) {
 
         if (user) {
             //This function should be used by other module.
-             onAuth();
+            onAuth();
         } else {
             //This function should be used by other module.
-             onUnAuth();
+            //onUnAuth();
         }
 
     });
@@ -103,89 +103,122 @@ function createUser(displayname, email, password) {
 
 
 $(".btnGoogle").click(function () {
-    
-        var user = firebase.auth().currentUser;
-    
-        running();
-        if (user) {
-    
-            //
-        } else {
-    
-            // No user is signed in.
-            // console.log("not logged in");
-    
-            var provider = new firebase.auth.GoogleAuthProvider();
-            provider.addScope('https://www.googleapis.com/auth/plus.login');
-            firebase.auth().signInWithPopup(provider).then(function (result) {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-                var token = result.credential.accessToken;
-                // The signed-in user info.
-                var user = result.user;
-                // ...
-            }).catch(function (error) {
-                stopping();
-                console.log("error");
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                // The email of the user's account used.
-                var email = error.email;
-                // The firebase.auth.AuthCredential type that was used.
-                var credential = error.credential;
-                // ...
-                showMsg(errorMessage);
-            });
-        }
-    });
-    
-    
-    
-    $(".btnfacebook").click(function () {
-    
-        var user = firebase.auth().currentUser;
-    
-        running();
-        if (user) {
-    
-            //
-        } else {
-    
-            // Sign in using a redirect.
-    
-            // Start a sign in process for an unauthenticated user.
-            var provider = new firebase.auth.FacebookAuthProvider();
-            provider.addScope('user_birthday');
-            firebase.auth().signInWithPopup(provider).then(function (result) {
-                // This gives you a Facebook Access Token.
-                var token = result.credential.accessToken;
-                // The signed-in user info.
-                var user = result.user;
-            }).catch(function (error) {
-                stopping();
-                console.log("error");
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                // The email of the user's account used.
-                var email = error.email;
-                // The firebase.auth.AuthCredential type that was used.
-                var credential = error.credential;
-    
-                showMsg(errorMessage);
-            });
-        }
-    });
-    
-    
-    
-    $(".btnLogOut").click(function () {
 
-        firebase.auth().signOut().then(function () {
-            console.log("log out");
-        }, function (error) {
-            console.log("log out fail");
-            // An error happened.
+    var user = firebase.auth().currentUser;
+
+    running();
+    if (user) {
+
+        //
+    } else {
+
+        // No user is signed in.
+        // console.log("not logged in");
+
+        var provider = new firebase.auth.GoogleAuthProvider();
+        provider.addScope('https://www.googleapis.com/auth/plus.login');
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+        }).catch(function (error) {
+            stopping();
+            console.log("error");
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+            showMsg(errorMessage);
         });
+    }
+});
 
+
+
+$(".btnfacebook").click(function () {
+
+    var user = firebase.auth().currentUser;
+
+    running();
+    if (user) {
+
+        //
+    } else {
+
+        // Sign in using a redirect.
+
+        // Start a sign in process for an unauthenticated user.
+        var provider = new firebase.auth.FacebookAuthProvider();
+        provider.addScope('user_birthday');
+        firebase.auth().signInWithPopup(provider).then(function (result) {
+            // This gives you a Facebook Access Token.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+        }).catch(function (error) {
+            stopping();
+            console.log("error");
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+
+            showMsg(errorMessage);
+        });
+    }
+});
+
+
+
+$(".btnLogOut").click(function () {
+
+    firebase.auth().signOut().then(function () {
+        console.log("log out");
+    }, function (error) {
+        console.log("log out fail");
+        // An error happened.
     });
+
+});
+
+
+function onSignIn(obj)
+{
+    $this = $(obj);
+
+    if ($this.hasClass('_register_'))
+    {
+
+    }
+}
+
+function onChangeType(obj)
+{
+    $this = $(obj);
+    if ($this.hasClass('_login_'))
+    {
+        $("._register_").removeClass("notshowable");
+        $("._login_").addClass("notshowable");
+    }
+    else if ($this.hasClass('_register_'))
+    {
+        $("._login_").removeClass("notshowable");
+        $("._register_").addClass("notshowable");
+    }
+}
+
+
+function onCheckPassword(obj)
+{
+    checkPassword(obj,document.getElementById('txtresponse'));
+
+}
