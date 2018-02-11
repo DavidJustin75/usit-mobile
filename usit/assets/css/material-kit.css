@@ -3318,10 +3318,12 @@ fieldset[disabled] .navbar .btn-link:focus {
     background-color: #3f51b5;
 }
 
+/* Modified By David */
+/* color: #fff; */
 .navbar.navbar-transparent {
     background-color: transparent;
     box-shadow: none;
-    color: #fff;
+    color: #333333;
     padding-top: 25px;
 }
 
@@ -6552,7 +6554,9 @@ select[data-dropdownjs][disabled] + .dropdownjs > input[readonly] {
 }
 
 .section {
-    padding: 70px 0;
+    /*Modified By David
+    padding: 70px 0; */
+     padding: 0px 0;
 }
 
 .section-navbars {
@@ -6647,6 +6651,8 @@ select[data-dropdownjs][disabled] + .dropdownjs > input[readonly] {
 .section-image {
     background-position: center center;
     background-size: cover;
+    /*Added by David */
+    background-color:#f7f7f7;
 }
 
 [class*="features-"],
@@ -6704,8 +6710,10 @@ select[data-dropdownjs][disabled] + .dropdownjs > input[readonly] {
     content: "";
 }
 
+/* Modified by David */
+/* rgba(0, 0, 0, 0.5); */
 .header-filter::before {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #f7f7f7;
 }
 
 .header-filter .container {
@@ -9168,7 +9176,7 @@ select.selectpicker {
 }
 
 .ecommerce-page .page-header .container {
-    padding-top: 20vh;
+    padding-top: 30vh;
     color: #FFFFFF;
     text-align: center;
 }

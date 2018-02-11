@@ -1,5 +1,10 @@
 
 
+
+/*
+ THIS FUNCTION SHOULD NOT DEFEND ON ANY JAVASCRIPT.
+ JUST ISOLCATED FUNCTION CAN BE DEFINED HERE.
+*/
 var gDevice;
 
 const _MS_PER_DAY = 1000 * 60 * 60 * 24;
@@ -136,10 +141,10 @@ $.fn.extend({
             setWarningConsole: function () {
                 if (this.name == "chrome" || this.name == "safari") {
                     console.log('%c Stop! ', 'font-size: 100px;color:red');
-                    console.log('%c This is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Use-Its feature or "hack" someone is account, it is a scam and will give them access to your account. ', 'color: black;font-size:large');
+                    console.log('%c This is a browser feature intended for developers. If someone told you to copy-paste something here to enable a USIT feature or "hack" someone is account, it is a scam and will give them access to your account. ', 'color: black;font-size:large');
                 }
                 else {
-                    console.log("Hey! Like what you see and enjoy looking under the hood? That's cool. We love curious people. You should join us and help us build great stuff. info@use-it.com")
+                    console.log("Hey! Like what you see and enjoy looking under the hood? That's cool. We love curious people. You should join us and help us build great stuff. david@usit.co.kr")
                 }
             }
 
@@ -461,7 +466,6 @@ function getElapsedTime(str_basetime) {
 }
 
 
-
 function running() {
     $("#loading").removeClass("notshowable");
     $("#bdMain").addClass("notshowable");
@@ -474,7 +478,7 @@ function stopping() {
 
 function showMsg(_msg) {
     $("#txtMsg").html(_msg);
-    $(".opb-message-modal").modal('toggle');
+    $("#usit-message-modal").modal('toggle');
 }
 
 
@@ -616,72 +620,82 @@ function getUrlVars(url) {
 
 
 
-function checkPassword(source,result) {
+function checkPassword(source, result) {
 
+    $source = $(source);
+    var password = $source.val();
 
-        $source = $(source);
-        var password = $source.val();
+    $result = $(result);
 
-        $result =$(result);
-    
-        $result.empty();
-    
-        //TextBox left blank.
-        if (password.length == 0) {
-            // $("#password_strength").text("");
-            return;
-        }
-    
-        //Regular Expressions.
-        var regex = new Array();
-        regex.push("[A-Z]"); //Uppercase Alphabet.
-        regex.push("[a-z]"); //Lowercase Alphabet.
-        regex.push("[0-9]"); //Digit.
-        regex.push("[$@$!%*#?&]"); //Special Character.
-    
-        var passed = 0;
-    
-        //Validate for each Regular Expression.
-        for (var i = 0; i < regex.length; i++) {
-            if (new RegExp(regex[i]).test(password)) {
-                passed++;
-            }
-        }
-    
-        if (password.length > 8) {
+    $result.empty();
+
+    //TextBox left blank.
+    if (password.length == 0) {
+        // $("#password_strength").text("");
+        return;
+    }
+
+    //Regular Expressions.
+    var regex = new Array();
+    regex.push("[A-Z]"); //Uppercase Alphabet.
+    regex.push("[a-z]"); //Lowercase Alphabet.
+    regex.push("[0-9]"); //Digit.
+    regex.push("[$@$!%*#?&]"); //Special Character.
+
+    var passed = 0;
+
+    //Validate for each Regular Expression.
+    for (var i = 0; i < regex.length; i++) {
+        if (new RegExp(regex[i]).test(password)) {
             passed++;
         }
-    
-        //Display status.
-        var color = "";
-        var strength = "";
-        switch (passed) {
-            case 0:
-            case 1:
-                strength = "1";
-                break;
-            case 2:
-                strength = "2";
-                break;
-            case 3:
-            case 4:
-                strength = "3";
-                break;
-            case 5:
-                strength = "4";
-                break;
-        }
-    
+    }
+
+    if (password.length > 8) {
+        passed++;
+    }
+
+    //Display status.
+    var color = "";
+    var strength = "";
+    switch (passed) {
+        case 0:
+        case 1:
+            strength = "1";
+            break;
+        case 2:
+            strength = "2";
+            break;
+        case 3:
+        case 4:
+            strength = "3";
+            break;
+        case 5:
+            strength = "4";
+            break;
+    }
+
+    if (password.length < 8) {
+        showPasswordTip($result,'최소 패스워드는 8자리 입니다.');
+    }
+    else {
         if (strength === "1") {
-            $result.html('패스워드가 매우 약합니다..');
+            showPasswordTip($result,'패스워드가 매우 약합니다.');
         }
         else if (strength === "2") {
-            $result.html('패스워드가 조금 더 강하면 좋을것 같습니다');
+            showPasswordTip($result,'패스워드가 조금 더 강하면 좋을것 같습니다.');
         }
         else if (strength === "3") {
-            $result.html('이정도 패스워드면 봐줄만 합니다.');
+            showPasswordTip($result,'이정도 패스워드면 봐줄만 합니다.');
         }
         else if (strength === "4") {
-            $result.html('오호 강력한 패스워드 입니다.');
+            showPasswordTip($result,'오호 강력한 패스워드 입니다.');
         }
     }
+}
+
+function showPasswordTip(obj,contents)
+{
+    $this = $(obj);
+    $this.html('<i class="material-icons">info</i>&nbsp;&nbsp;<div style="margin-top:2px">'+contents+'</div>');
+}

@@ -31,18 +31,18 @@
 
 					<div class="card card-signup">
 						<div style="text-align:center">
-							<img style="width:70px" src="../dist/img/usitimg1.png" />
+							<a href="../"><img style="width:70px" src="../dist/img/usitimg1.png" /></a>
 						</div>
 						<br>
 						<div class="row">
 							<div class="col-md-12">
 								<div class="social text-center">
-									<button class="btn btn-social btn-fill btn-google">
+									<button class="btn btn-social btn-fill btn-google" style="width:175px">
 										<i class="fa fa-google"></i> 구글로 로그인
 										<div class="ripple-container"></div>
 									</button>
 
-									<button class="btn btn-social btn-fill btn-facebook">
+									<button class="btn btn-social btn-fill btn-facebook"  style="width:175px">
 										<i class="fa fa-facebook-square"></i> 페이스북으로 로그인
 										<div class="ripple-container"></div>
 									</button>
@@ -63,17 +63,17 @@
 											</div>
 										</div>
 
-										<div class="input-group _login_ notshowable" >
+										<div class="input-group _login_ notshowable">
 											<span class="input-group-addon">
 												<i class="material-icons">lock_outline</i>
 											</span>
 
 											<div class="form-group label-floating is-empty">
 												<label class="control-label">패스워드</label>
-												<input id="txtpassword" type="password"  onkeydown="onCheckPassword(this)" class="form-control">
+												<input id="txtpassword" type="password" onkeydown="onCheckPassword(this)" class="form-control">
 												<span class="material-input"></span>
 											</div>
-											<span id="txtresponse" style="color:red"></span>
+											<span id="txtresponse" style="color:red;display:inline-flex"></span>
 										</div>
 
 										<div class="input-group">
@@ -143,26 +143,47 @@
 		</footer>
 
 	</div>
+	<button onclick="test()">aaa</button>
+
+	<div class="modal fade" id="usit-message-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+	 style="display: none;">
+		<div class="modal-dialog modal-small ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span>알림 메세지</span>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="material-icons">clear</i>
+					</button>
+				</div>
+				<div class="modal-body text-center" id="txtMsg">
+
+				</div>
+				<div class="modal-footer text-center">
+					<button type="button" class="btn btn-simple" data-dismiss="modal">신경 안씀
+						<div class="ripple-container">
+							<div class="ripple ripple-on ripple-out" style="left: 78.9531px; top: 22px; background-color: rgb(153, 153, 153); transform: scale(12.7949);"></div>
+						</div>
+					</button>
+					<button type="button" class="btn btn-success btn-simple" data-dismiss="modal">확인
+						<div class="ripple-container"></div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 </body>
-<!--   Core JS Files   -->
+<!--   External Source  -->
 <script src="../assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="../assets/js/material.min.js"></script>
-
-<!--    Plugin for Date Time Picker and Full Calendar Plugin   -->
 <script src="../assets/js/moment.min.js"></script>
-
-<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput   -->
 <script src="../assets/js/jasny-bootstrap.min.js"></script>
-
 <script src="../assets/js/bootstrap-tagsinput.js"></script>
-
-<!--    Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc    -->
 <script src="../assets/js/material-kit.js?v=1.2.1" type="text/javascript"></script>
 
-
+<!-- Firebase Source -->
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
@@ -170,7 +191,9 @@
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-storage.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>
 
+
+<!-- Internal Source -->
 <script src="../dist/js/auth.js" type="text/javascript"></script>
-<script src="../dist/js/util.js" type="text/javascript"></script>
+<script async src="../dist/js/util.js" type="text/javascript"></script>
 
 </html>
