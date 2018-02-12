@@ -7,6 +7,12 @@
 */
 var gDevice;
 
+$(document).ready(function ($) {
+
+    console.log(gDevice.setWarningConsole());
+
+});
+
 const _MS_PER_DAY = 1000 * 60 * 60 * 24;
 
 $.fn.extend({
@@ -676,26 +682,25 @@ function checkPassword(source, result) {
     }
 
     if (password.length < 8) {
-        showPasswordTip($result,'최소 패스워드는 8자리 입니다.');
+        showPasswordTip($result, '최소 패스워드는 8자리 입니다.');
     }
     else {
         if (strength === "1") {
-            showPasswordTip($result,'패스워드가 매우 약합니다.');
+            showPasswordTip($result, '패스워드가 매우 약합니다.');
         }
         else if (strength === "2") {
-            showPasswordTip($result,'패스워드가 조금 더 강하면 좋을것 같습니다.');
+            showPasswordTip($result, '패스워드가 조금 더 강하면 좋을것 같습니다.');
         }
         else if (strength === "3") {
-            showPasswordTip($result,'이정도 패스워드면 봐줄만 합니다.');
+            showPasswordTip($result, '이정도 패스워드면 봐줄만 합니다.');
         }
         else if (strength === "4") {
-            showPasswordTip($result,'오호 강력한 패스워드 입니다.');
+            showPasswordTip($result, '오호 강력한 패스워드 입니다.');
         }
     }
 }
 
-function showPasswordTip(obj,contents)
-{
+function showPasswordTip(obj, contents) {
     $this = $(obj);
-    $this.html('<i class="material-icons">info</i>&nbsp;&nbsp;<div style="margin-top:2px">'+contents+'</div>');
+    $this.html('<i class="material-icons">info</i>&nbsp;&nbsp;<div style="margin-top:2px">' + contents + '</div>');
 }

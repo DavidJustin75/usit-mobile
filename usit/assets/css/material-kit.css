@@ -3318,12 +3318,10 @@ fieldset[disabled] .navbar .btn-link:focus {
     background-color: #3f51b5;
 }
 
-/* Modified By David */
-/* color: #fff; */
 .navbar.navbar-transparent {
     background-color: transparent;
     box-shadow: none;
-    color: #333333;
+    color: #fff;
     padding-top: 25px;
 }
 
@@ -4238,7 +4236,7 @@ h2.title {
 .card .footer .stats .material-icons {
     position: relative;
     top: 4px;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .carousel .card {
@@ -4324,8 +4322,8 @@ h2.title {
 }
 
 .card-plain .card-content {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .card-plain .card-image {
@@ -4618,7 +4616,7 @@ h2.title {
 .card-product .card-title,
 .card-product .category,
 .card-product .card-description {
-    text-align: center;
+    text-align: left;
 }
 
 .card-product .category {
