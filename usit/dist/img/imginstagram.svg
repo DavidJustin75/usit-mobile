@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="430px" height="430px" viewBox="0 0 430 430" enable-background="new 0 0 430 430" xml:space="preserve">
+<g>
+
+		<radialGradient id="SVGID_1_" cx="124.9139" cy="6.129367e-02" r="433.3081" gradientTransform="matrix(1 0 0 -1 0 429)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFD776"/>
+		<stop  offset="0.2463" style="stop-color:#F3A554"/>
+		<stop  offset="0.3793" style="stop-color:#F15C3C"/>
+		<stop  offset="0.5394" style="stop-color:#D94867"/>
+		<stop  offset="0.6995" style="stop-color:#C32F87"/>
+		<stop  offset="0.9122" style="stop-color:#7D63A7"/>
+		<stop  offset="0.9852" style="stop-color:#5C6CB3"/>
+	</radialGradient>
+	<path fill="url(#SVGID_1_)" d="M429.8,336c0,51.9-41.9,94-93.6,94H93.6C41.9,430,0,387.9,0,336V95c0-51.9,41.9-94,93.6-94h242.8
+		c51.7,0,93.6,42.1,93.6,94v241H429.8z"/>
+	<g>
+		<path fill="none" stroke="#FFFFFF" stroke-width="35.0651" stroke-miterlimit="10" d="M357.9,285.3c0,43.9-35.6,79.6-79.6,79.6
+			H149.9c-43.9,0-79.6-35.6-79.6-79.6v-137c0-43.9,35.6-79.6,79.6-79.6h128.4c43.9,0,79.6,35.6,79.6,79.6L357.9,285.3L357.9,285.3z"
+			/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="42.8573" stroke-miterlimit="10" d="M284.7,216.3c-0.9,39-31.6,70.6-70.6,70.6
+			s-70.6-31.6-70.6-70.6s31.6-71.7,70.6-70.6C261.6,147.1,285.5,177.5,284.7,216.3z"/>
+		<circle fill="#FFFFFF" cx="301" cy="129.1" r="19.8"/>
+	</g>
+</g>
+</svg>
