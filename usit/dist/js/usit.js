@@ -34,8 +34,11 @@ function onShowShareMsg(obj) {
     else if ($this.hasClass('facebook')) {
         $("#usit-share-facebook-modal").modal('toggle');
     }
-    else if ($this.hasClass('naver')) {
-        $("#usit-share-naver-modal").modal('toggle');
+    else if ($this.hasClass('kakaotalk')) {
+        $("#usit-share-kakaotalk-modal").modal('toggle');
+    }
+    else if ($this.hasClass('kakaostory')) {
+        $("#usit-share-kakaostory-modal").modal('toggle');
     }
     else if ($this.hasClass('url')) {
         $("#usit-share-url-modal").modal('toggle');

@@ -637,9 +637,10 @@
 					</span>
 					<div>
 						<img class="instagram point" src="../dist/img/imginstagram.svg" style="width:40px" onclick="onShowShareMsg(this)">
-						<img class="facebook point" src="../dist/img/imgfacebook.png" style="width:40px"  onclick="onShowShareMsg(this)">
-						<img class="naver point" src="../dist/img/imgnaverblog.png" style="width:40px" onclick="onShowShareMsg(this)">
-						<img class="url point" src="../dist/img/imgurl.png" style="width: 35px;background-color: #bdb7b7; padding: 5px; border-radius: 5px;" onclick="onShowShareMsg(this)">
+						<img class="facebook point" src="../dist/img/imgfacebook.png" style="width:42px"  onclick="onShowShareMsg(this)">
+						<img class="kakaotalk point" src="../dist/img/imgkakao.png" style="width:40px;border-radius: 5px;" onclick="onShowShareMsg(this)">
+						<img class="kakaostory point" src="../dist/img/imgkakaostory.gif" style="width:40px" onclick="onShowShareMsg(this)">
+						<img class="url point" src="../dist/img/imgurl.png" style="width: 38px;background-color: #bdb7b7; padding: 5px; border-radius: 5px;" onclick="onShowShareMsg(this)">
 
 					</div>
 				</div>
@@ -662,14 +663,14 @@
 					<span style="font-size:12px">
 						선착순으로 공유하신 분들에게 무료로 상품 배송!
 					</span>
-					<div class="row" style="margin-right: 15px;">
-						<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
 							<button class="btn">사진 다운로드
 								<div class="ripple-container"></div>
 							</button>
 						</div>
-						<div class="col-md-6">
-							<button class="btn btn-danger">인증하러 가기</button>
+						<div class="col-md-6 col-xs-6">
+							<button class="btn btn-danger">인증하기</button>
 						</div>
 					</div>
 				</div>
@@ -704,6 +705,60 @@
 	   </div>
    </div>
 
+   <div class="modal fade" id="usit-share-kakaotalk-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+   style="display: none;">
+	  <div class="modal-dialog modal-small ">
+		  <div class="modal-content">
+			  <div class="modal-header">
+				  <img src="../dist/img/imgkakao.png" style="width:40px;border-radius:5px">
+				  <span style="font-size:20px">카카오톡 공유</span>
+				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					  <i class="material-icons">clear</i>
+				  </button>
+			  </div>
+			  <div class="modal-body text-left"  style="margin-top:0px">
+				  <span style="font-size:12px">
+					   카카오톡의 경우 선착순 무료 이벤트 뿐만 아니라<br>
+					   공유 후 유입수를 측정하여 추가 포인트를 제공합니다.<br>
+					   자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요
+				  </span>
+				  <div class="row">
+					  <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+						  <button style="width:100%" class="btn btn-danger">인증하러 가기</button>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+
+  <div class="modal fade" id="usit-share-kakaostory-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+  style="display: none;">
+	 <div class="modal-dialog modal-small ">
+		 <div class="modal-content">
+			 <div class="modal-header">
+				 <img src="../dist/img/imgkakaostory.gif" style="width:40px">
+				 <span style="font-size:20px">카카오스토리 공유</span>
+				 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					 <i class="material-icons">clear</i>
+				 </button>
+			 </div>
+			 <div class="modal-body text-left"  style="margin-top:0px">
+				 <span style="font-size:12px">
+					  카카오스토리의 경우 선착순 무료 이벤트 뿐만 아니라<br>
+					  공유 후 유입수를 측정하여 추가 포인트를 제공합니다.<br>
+					  자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요
+				 </span>
+				 <div class="row">
+					 <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+						 <button style="width:100%" class="btn btn-danger">인증하러 가기</button>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+<!--
    <div class="modal fade" id="usit-share-naver-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
    style="display: none;">
 	  <div class="modal-dialog modal-small ">
@@ -731,7 +786,7 @@
 		  </div>
 	  </div>
   </div>
-
+-->
   <div class="modal fade" id="usit-share-url-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
   style="display: none;">
 	 <div class="modal-dialog modal-small ">
@@ -751,13 +806,13 @@
 						단, 유입수 측정이 되지 않는 곳은 유입수에 따른<br>
 						포인트 제공을 받을 수 없습니다.
 				 </span>
-				 <div class="row">
-					 <div class="col-md-6">
+				 <div class="row" >
+					 <div class="col-md-6 col-xs-6">
 						 <button class="btn">사진 다운로드
 							 <div class="ripple-container"></div>
 						 </button>
 					 </div>
-					 <div class="col-md-6">
+					 <div class="col-md-6 col-xs-6">
 						 <button class="btn btn-danger">URL 복사</button>
 					 </div>
 				 </div>
