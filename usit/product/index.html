@@ -217,15 +217,15 @@
 						</ul>
 					</div>
 					<div class="col-md-6 col-sm-6">
-						<h2 class="title"> Becky Silk Blazer </h2>
-						<h3 class="main-price">$335</h3>
+						<h5 class="title"> 바루솔 엑스퍼트 리페어 살브크림 30ml </h5>
+						<h6 class="main-price">₩ 1,430</h6>
 						<div id="acordeon">
 							<div class="panel-group" id="accordion">
 								<div class="panel panel-border panel-default">
 									<div class="panel-heading" role="tab" id="headingOne">
 										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 											<h4 class="panel-title">
-												Description
+												상품 간단 설명
 												<i class="material-icons">keyboard_arrow_down</i>
 											</h4>
 										</a>
@@ -242,7 +242,7 @@
 									<div class="panel-heading" role="tab" id="headingOne">
 										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseOne">
 											<h4 class="panel-title">
-												Designer Information
+												상품 구매 조건
 												<i class="material-icons">keyboard_arrow_down</i>
 											</h4>
 										</a>
@@ -255,47 +255,25 @@
 										</div>
 									</div>
 								</div>
-								<div class="panel panel-border panel-default">
-									<div class="panel-heading" role="tab" id="headingOne">
-										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-controls="collapseOne">
-											<h4 class="panel-title">
-												Details and Care
-												<i class="material-icons">keyboard_arrow_down</i>
-											</h4>
-										</a>
-									</div>
-									<div id="collapseThree" class="panel-collapse collapse">
-										<div class="panel-body">
-											<ul>
-												<li>Storm and midnight-blue stretch cotton-blend</li>
-												<li>Notch lapels, functioning buttoned cuffs, two front flap pockets, single vent, internal pocket</li>
-												<li>Two button fastening</li>
-												<li>84% cotton, 14% nylon, 2% elastane</li>
-												<li>Dry clean</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-
 							</div>
 						</div>
 						<!--  end acordeon -->
 
 						<div class="row pick-size">
-							<div class="col-md-6 col-sm-6">
-								<label>Select color</label>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<label>옵션</label>
 								<select class="selectpicker" data-style="select-with-transition" data-size="7">
 									<option value="1">Rose </option>
 									<option value="2">Gray</option>
 									<option value="3">White</option>
 								</select>
 							</div>
-							<div class="col-md-6 col-sm-6">
-								<label>Select size</label>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<label>갯수</label>
 								<select class="selectpicker" data-style="select-with-transition" data-size="7">
-									<option value="1">Small </option>
-									<option value="2">Medium</option>
-									<option value="3">Large</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
 								</select>
 							</div>
 						</div>
@@ -305,25 +283,13 @@
 									<!--
 											color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
 										-->
-									<li class="active">
-										<a href="#dashboard-1" role="tab" data-toggle="tab">
-											<i class="material-icons">credit_card</i>
-											구매하기
-										</a>
-									</li>
-									<li>
-										<a class="point" role="tab" data-toggle="tab" onclick="onShare()">
-											<i class="material-icons">mic_none</i>
-											공유하기
-										</a>
-									</li>
 									<li class="">
 										<a href="#schedule-1" role="tab" data-toggle="tab" aria-expanded="false">
 											<i class="material-icons">verified_user</i>
 											인증받기
 										</a>
 									</li>
-									<li>
+									<li class="active">
 										<a href="#tasks-1" role="tab" data-toggle="tab" aria-expanded="true">
 											<i class="material-icons">shopping_cart</i>
 											담아두기
@@ -581,6 +547,34 @@
 		</div>
 	</footer>
 
+	<div class="point footer-navigator">
+
+		<div class="row">
+
+			<div class="col-sm-4 col-md-4 col-xs-4 point">
+				<a>
+					<i class="material-icons">credit_card</i>
+					구매하기
+				</a>
+			</div>
+			<div class="col-sm-4 col-md-4 col-xs-4 point">
+				<a>
+					<i class="material-icons">card_giftcard</i>
+					선물하기
+				</a>
+			</div>
+			<div class="col-sm-4 col-md-4 col-xs-4 point" onclick="onShare()">
+				<a style=" margin-left: -10px;">
+					<i class="material-icons">mic_none</i>
+					공유하기
+				</a>
+			</div>
+
+
+		</div>
+
+	</div>
+
 	<div class="modal fade" id="usit-message-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
 	 style="display: none;">
 		<div class="modal-dialog modal-small ">
@@ -637,10 +631,11 @@
 					</span>
 					<div>
 						<img class="instagram point" src="../dist/img/imginstagram.svg" style="width:40px" onclick="onShowShareMsg(this)">
-						<img class="facebook point" src="../dist/img/imgfacebook.png" style="width:42px"  onclick="onShowShareMsg(this)">
+						<img class="facebook point" src="../dist/img/imgfacebook.png" style="width:42px" onclick="onShowShareMsg(this)">
 						<img class="kakaotalk point" src="../dist/img/imgkakao.png" style="width:40px;border-radius: 5px;" onclick="onShowShareMsg(this)">
 						<img class="kakaostory point" src="../dist/img/imgkakaostory.gif" style="width:40px" onclick="onShowShareMsg(this)">
-						<img class="url point" src="../dist/img/imgurl.png" style="width: 38px;background-color: #bdb7b7; padding: 5px; border-radius: 5px;" onclick="onShowShareMsg(this)">
+						<img class="url point" src="../dist/img/imgurl.png" style="width: 38px;background-color: #bdb7b7; padding: 5px; border-radius: 5px;"
+						 onclick="onShowShareMsg(this)">
 
 					</div>
 				</div>
@@ -659,7 +654,7 @@
 						<i class="material-icons">clear</i>
 					</button>
 				</div>
-				<div class="modal-body text-left" >
+				<div class="modal-body text-left">
 					<span style="font-size:12px">
 						선착순으로 공유하신 분들에게 무료로 상품 배송!
 					</span>
@@ -679,86 +674,86 @@
 	</div>
 
 	<div class="modal fade" id="usit-share-facebook-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-	style="display: none;">
-	   <div class="modal-dialog modal-small ">
-		   <div class="modal-content">
-			   <div class="modal-header">
-				   <img src="../dist/img/imgfacebook.png" style="width:40px">
-				   <span style="font-size:20px">페이스북 공유</span>
-				   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-					   <i class="material-icons">clear</i>
-				   </button>
-			   </div>
-			   <div class="modal-body text-left"  style="margin-top:0px">
-				   <span style="font-size:12px">
-						페이스북의 경우 선착순 무료 이벤트 뿐만 아니라<br>
-						공유 후 유입수를 측정하여 추가 포인트를 제공합니다.<br>
-						자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요
-				   </span>
-				   <div class="row">
-					   <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
-						   <button style="width:100%" class="btn btn-danger">인증하러 가기</button>
-					   </div>
-				   </div>
-			   </div>
-		   </div>
-	   </div>
-   </div>
+	 style="display: none;">
+		<div class="modal-dialog modal-small ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<img src="../dist/img/imgfacebook.png" style="width:40px">
+					<span style="font-size:20px">페이스북 공유</span>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="material-icons">clear</i>
+					</button>
+				</div>
+				<div class="modal-body text-left" style="margin-top:0px">
+					<span style="font-size:12px">
+						페이스북의 경우 선착순 무료 이벤트 뿐만 아니라
+						<br> 공유 후 유입수를 측정하여 추가 포인트를 제공합니다.
+						<br> 자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요
+					</span>
+					<div class="row">
+						<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+							<button style="width:100%" class="btn btn-danger">인증하러 가기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-   <div class="modal fade" id="usit-share-kakaotalk-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-   style="display: none;">
-	  <div class="modal-dialog modal-small ">
-		  <div class="modal-content">
-			  <div class="modal-header">
-				  <img src="../dist/img/imgkakao.png" style="width:40px;border-radius:5px">
-				  <span style="font-size:20px">카카오톡 공유</span>
-				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-					  <i class="material-icons">clear</i>
-				  </button>
-			  </div>
-			  <div class="modal-body text-left"  style="margin-top:0px">
-				  <span style="font-size:12px">
-					   카카오톡의 경우 선착순 무료 이벤트 뿐만 아니라<br>
-					   공유 후 유입수를 측정하여 추가 포인트를 제공합니다.<br>
-					   자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요
-				  </span>
-				  <div class="row">
-					  <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
-						  <button style="width:100%" class="btn btn-danger">인증하러 가기</button>
-					  </div>
-				  </div>
-			  </div>
-		  </div>
-	  </div>
-  </div>
+	<div class="modal fade" id="usit-share-kakaotalk-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+	 style="display: none;">
+		<div class="modal-dialog modal-small ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<img src="../dist/img/imgkakao.png" style="width:40px;border-radius:5px">
+					<span style="font-size:20px">카카오톡 공유</span>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="material-icons">clear</i>
+					</button>
+				</div>
+				<div class="modal-body text-left" style="margin-top:0px">
+					<span style="font-size:12px">
+						카카오톡의 경우 선착순 무료 이벤트 뿐만 아니라
+						<br> 공유 후 유입수를 측정하여 추가 포인트를 제공합니다.
+						<br> 자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요
+					</span>
+					<div class="row">
+						<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+							<button style="width:100%" class="btn btn-danger">인증하러 가기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <div class="modal fade" id="usit-share-kakaostory-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-  style="display: none;">
-	 <div class="modal-dialog modal-small ">
-		 <div class="modal-content">
-			 <div class="modal-header">
-				 <img src="../dist/img/imgkakaostory.gif" style="width:40px">
-				 <span style="font-size:20px">카카오스토리 공유</span>
-				 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-					 <i class="material-icons">clear</i>
-				 </button>
-			 </div>
-			 <div class="modal-body text-left"  style="margin-top:0px">
-				 <span style="font-size:12px">
-					  카카오스토리의 경우 선착순 무료 이벤트 뿐만 아니라<br>
-					  공유 후 유입수를 측정하여 추가 포인트를 제공합니다.<br>
-					  자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요
-				 </span>
-				 <div class="row">
-					 <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
-						 <button style="width:100%" class="btn btn-danger">인증하러 가기</button>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-	 </div>
- </div>
-<!--
+	<div class="modal fade" id="usit-share-kakaostory-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+	 style="display: none;">
+		<div class="modal-dialog modal-small ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<img src="../dist/img/imgkakaostory.gif" style="width:40px">
+					<span style="font-size:20px">카카오스토리 공유</span>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="material-icons">clear</i>
+					</button>
+				</div>
+				<div class="modal-body text-left" style="margin-top:0px">
+					<span style="font-size:12px">
+						카카오스토리의 경우 선착순 무료 이벤트 뿐만 아니라
+						<br> 공유 후 유입수를 측정하여 추가 포인트를 제공합니다.
+						<br> 자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요
+					</span>
+					<div class="row">
+						<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+							<button style="width:100%" class="btn btn-danger">인증하러 가기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
    <div class="modal fade" id="usit-share-naver-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
    style="display: none;">
 	  <div class="modal-dialog modal-small ">
@@ -787,40 +782,38 @@
 	  </div>
   </div>
 -->
-  <div class="modal fade" id="usit-share-url-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-  style="display: none;">
-	 <div class="modal-dialog modal-small ">
-		 <div class="modal-content">
-			 <div class="modal-header">
-				 <span style="font-size:20px">기타 채널로 공유</span>
-				 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-					 <i class="material-icons">clear</i>
-				 </button>
-			 </div>
-			 <div class="modal-body text-left" style="margin-top:0px">
-				 <span style="font-size:12px">
-						유입수 측정이 가능한 곳의 경우 선착순 무료 이벤트<br>
-						뿐만 아니라 공유 후 유입수를 측정하여 추가<br>
-						포인트를 제공합니다.
-						자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요.
-						단, 유입수 측정이 되지 않는 곳은 유입수에 따른<br>
-						포인트 제공을 받을 수 없습니다.
-				 </span>
-				 <div class="row" >
-					 <div class="col-md-6 col-xs-6">
-						 <button class="btn">사진 다운로드
-							 <div class="ripple-container"></div>
-						 </button>
-					 </div>
-					 <div class="col-md-6 col-xs-6">
-						 <button class="btn btn-danger">URL 복사</button>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-	 </div>
- </div>
-	
+	<div class="modal fade" id="usit-share-url-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+	 style="display: none;">
+		<div class="modal-dialog modal-small ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span style="font-size:20px">기타 채널로 공유</span>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="material-icons">clear</i>
+					</button>
+				</div>
+				<div class="modal-body text-left" style="margin-top:0px">
+					<span style="font-size:12px">
+						유입수 측정이 가능한 곳의 경우 선착순 무료 이벤트
+						<br> 뿐만 아니라 공유 후 유입수를 측정하여 추가
+						<br> 포인트를 제공합니다. 자세한 사항은 [마이페이지]-[공유내역]에서 확인해주세요. 단, 유입수 측정이 되지 않는 곳은 유입수에 따른
+						<br> 포인트 제공을 받을 수 없습니다.
+					</span>
+					<div class="row">
+						<div class="col-md-6 col-xs-6">
+							<button class="btn">사진 다운로드
+								<div class="ripple-container"></div>
+							</button>
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<button class="btn btn-danger">URL 복사</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 </body>
 
@@ -831,26 +824,12 @@
 
 <!--    Plugin for Date Time Picker and Full Calendar Plugin   -->
 <script src="../assets/js/moment.min.js"></script>
-
-<!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/   -->
 <script src="../assets/js/nouislider.min.js" type="text/javascript"></script>
-
-<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker   -->
 <script src="../assets/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
-
-<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select   -->
 <script src="../assets/js/bootstrap-selectpicker.js" type="text/javascript"></script>
-
-<!--	Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/   -->
 <script src="../assets/js/bootstrap-tagsinput.js"></script>
-
-<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput   -->
 <script src="../assets/js/jasny-bootstrap.min.js"></script>
-
-<!--	Plugin for Product Gallery, full documentation here: https://9bitstudios.github.io/flexisel/ -->
 <script src="../assets/js/jquery.flexisel.js"></script>
-
-<!--    Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc    -->
 <script src="../assets/js/material-kit.js?v=1.2.1" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -881,18 +860,18 @@
 
 
 <!-- Firebase Source -->
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-storage.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase-messaging.js"></script>
 
 
 <!-- Internal Source -->
 <script src="../dist/js/auth.js" type="text/javascript"></script>
 <script async src="../dist/js/util.js" type="text/javascript"></script>
-<script async src="../dist/js/usit.js" type="text/javascript"></script>
+<script async src="../dist/js/50524f4455435444455441494c.js" type="text/javascript"></script>
 
 
 </html>
