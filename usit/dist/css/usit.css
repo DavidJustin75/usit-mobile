@@ -6,10 +6,20 @@
 .category > div
 {
     background-color:white;
-    width:50px;
+    width:60px;
     height:50px;
     border-radius: 50%;
-    border: solid 2px #ff5c01;
+    border: solid 2px #333333;
+    padding-top:55px;
+    color:#333333;
+    font-size:10px;
+    background-size:cover;
+}
+
+.categorylist > li > a > img
+{
+    width:25px;
+    height:25px;
 }
 
 .ml5

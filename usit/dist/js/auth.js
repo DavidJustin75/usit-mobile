@@ -1,6 +1,7 @@
 // Use the otherApp variable to retrieve the other app's services
 var gStoreStorage;
 var gStoreDatabase;
+var gDomain = "https://www.usit.co.kr";
 
 
 
